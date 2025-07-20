@@ -56,7 +56,8 @@ This guide covers:
 sudo apt update && sudo apt upgrade -y
 ```
 
-  ![alt text](image.png)
+ <img width="1068" height="340" alt="image" src="https://github.com/user-attachments/assets/e6c195ad-84ef-4803-b2e1-df695a919f73" />
+
 
 ---
 
@@ -66,7 +67,8 @@ sudo apt update && sudo apt upgrade -y
 Python3 -version
 ```
 
- ![alt text](image-5.png)
+ <img width="1044" height="187" alt="image" src="https://github.com/user-attachments/assets/be994779-1fa0-4dde-8e77-1ff8088ac9e5" />
+
 > If Python is installed, you'll see the version details. If not, proceed to the next step.
 
 ---
@@ -77,7 +79,8 @@ Python3 -version
 ```bash
 sudo apt install python3 -y
 ```
-![alt text](image-4.png)
+<img width="1196" height="198" alt="image" src="https://github.com/user-attachments/assets/ad7fb35b-a4c6-4413-a7f0-5d70fbbd7184" />
+
 ---
 
 ### Step 4: Verify Installation
@@ -86,7 +89,8 @@ sudo apt install python3 -y
 Python3 --version  # Check Python
 ```
 
- ![alt text](image-1.png)
+<img width="1196" height="167" alt="image" src="https://github.com/user-attachments/assets/cdf4198f-e051-4649-94f7-762c6ed58acc" />
+
 
 ---
 
@@ -98,7 +102,8 @@ Python3 --version  # Check Python
 sudo apt install python3-pip -y
 ```
 
-  ![alt text](image-2.png)
+  <img width="1260" height="355" alt="image" src="https://github.com/user-attachments/assets/f3e16982-8f5f-4f29-b5e6-59471668bca1" />
+
 
 #### Verify pip:
 
