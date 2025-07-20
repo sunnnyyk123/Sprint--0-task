@@ -105,7 +105,8 @@ sudo apt install python3-pip -y
 ```bash
 pip3 --version
 ```
-   ![alt text](image-3.png)
+   <img width="735" height="166" alt="image" src="https://github.com/user-attachments/assets/919b8652-70c3-4645-a802-202928526c38" />
+
   
   
 
