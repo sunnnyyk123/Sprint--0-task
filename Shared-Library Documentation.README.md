@@ -3,114 +3,111 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Why React.js?](#why-reactjs)
-- [What is React.js?](#what-is-reactjs)
-- [Key Features of React.js](#key-features-of-reactjs)
-- [Getting Started](#getting-started)
-- [Basic Concepts](#basic-concepts)
+- [Why Shared-Library?](#why-Shared-Library)
+- [What is Shared-Library?](#what-is-Shared-Library)
+- [Advantage of shared library](#Advantage-of-shared-library)
+- [Disadvantage of shared library](#Disadvantage-of-shared-library)
+- [workflow](#workflow)
+- [Best Practices](#Best-Practices)
 - [Conclusion](#conclusion)
-- [Author](#author)
+- [Contact information](#Contact-information)
 - [References](#references)
 
 ---
 
 ## Introduction
 
-React.js is a popular open-source JavaScript library for building user interfaces, especially single-page applications where a fast, interactive user experience is needed. It was developed by Facebook and is maintained by Facebook and a community of developers.
+This documentation explains Shared Library in Jenkins with a clear, step-by-step approach. It helps you understand the structure, setup, and usage to streamline and reuse pipeline code effectively.
 
 ---
 
-## Why React.js?
+## Why Shared-Library?
 
-- **Popularity & Community Support:** React.js is widely used, with a large community and extensive resources.
-- **Performance:** Utilizes a virtual DOM to optimize and accelerate UI rendering.
-- **Reusable Components:** Encourages modularity and reusability in UI development.
-- **Strong Ecosystem:** Supported by tools, libraries, and integrations for routing, state management, and more.
-- **Backward Compatibility:** React pays special attention to minimizing breaking changes.
+- To standardize pipeline code across teams/projects.
 
----
+- To avoid repetition of Groovy logic in multiple Jenkinsfiles.
 
-## What is React.js?
+- To encapsulate complex logic (e.g., deployment, testing, notifications).
 
-React.js is a JavaScript library for building composable user interfaces based on components. It allows developers to create large web applications that can update and render efficiently in response to data changes.
-
-React focuses on the "view" layer of the application, making it easy to develop interactive UIs by breaking them into small, reusable pieces called components.
+- To version and test pipeline logic independently from application code.
 
 ---
 
-## Key Features of React.js
+## What is Shared-Library?
 
-- **Component-Based Architecture:** UI is divided into independent, reusable components.
-- **Virtual DOM:** Improves performance by minimizing direct manipulation of the real DOM.
-- **Declarative Syntax:** Developers describe what the UI should look like for any state, and React takes care of updating the UI.
-- **Unidirectional Data Flow:** Data flows in a single direction, making the app easier to understand and debug.
-- **JSX (JavaScript XML):** A syntax extension that allows writing HTML-like code within JavaScript files.
-- **Rich Ecosystem:** Integrates with tools like Redux for state management, React Router for navigation, and more.
-- **Strong Developer Tools:** Includes React Developer Tools for debugging and inspection.
-- **Server-Side Rendering (SSR):** Supports rendering on the server for faster load times and SEO benefits.
-- **React Native:** Enables building mobile apps using the same React concepts.
+Shared library is a way to reuse code across multiple pipelines. It allows you to store commonly used functions, scripts, and resources in a separate repository and load them into your pipelines. This promotes code organization, reduces duplication, and simplifies pipeline maintenance. 
 
 ---
 
-## Getting Started
+## Advantage of shared library
 
-1. **Installation**
-   - Using `create-react-app`:
-     ```bash
-     npx create-react-app my-app
-     cd my-app
-     npm start
-     ```
-   - Or add React to an existing project:
-     ```bash
-     npm install react react-dom
-     ```
+- **Code Reusability:**
+Shared libraries allow you to define reusable functions, classes, and pipeline steps in a centralized location, eliminating the need to duplicate code across multiple pipelines. 
 
-2. **Basic Example**
-   ```jsx
-   import React from 'react';
 
-   function App() {
-     return (
-       <div>
-         <h1>Hello, React!</h1>
-       </div>
-     );
-   }
+- **Standardization:**
+By providing a common set of functions and steps, shared libraries help standardize pipeline definitions and processes across different projects, reducing inconsistencies and potential errors. 
 
-   export default App;
-   ```
+
+- **Reduced Duplication:**
+Shared libraries minimize code duplication, making pipelines easier to maintain and update. Changes to shared logic need only be applied in one place.
+
+
+- **Improved Maintainability:**
+Centralizing common functionalities in a shared library makes it easier to update, debug, and maintain pipeline logic, as changes are applied in one place and reflected across all pipelines using the library.
+
+
+- **Faster Onboarding:**
+Shared libraries can accelerate the onboarding of new applications, projects, or teams by providing a readily available set of reusable pipeline components. 
+
+
+- **Versioning and Updates:**
+Shared libraries can be versioned, allowing you to manage changes and updates to pipeline logic effectively, while maintaining access to previous versions. 
+
+
+- **Extensibility:**
+Shared libraries can be extended with custom Groovy functions and classes, allowing for complex logic and integrations. 
+
+---
+
+## Disadvantage of shared library
+
+- **Learning Curve:** Requires understanding of Groovy and pipeline internals.
+
+- **Debugging:** Errors may be harder to trace across multiple files.
 
 ---
 
-## Basic Concepts
+## workflow
 
-- **Components:** The building blocks of React applications. Can be functional or class-based.
-- **Props:** Inputs to components for passing data.
-- **State:** Local data managed within components.
-- **Lifecycle Methods:** Special methods for managing component behavior over its lifetime.
-- **Event Handling:** Responding to user inputs and actions.
-- **Conditional Rendering:** Showing UI elements based on certain conditions.
-- **Lists and Keys:** Rendering collections of data efficiently.
+### Step 1: 
+- Create a Git repository  for your Shared Library.
+   
+### Step 2: 
+- Define folder structure
+![alt text](image.png)
+  
+### Step 3: 
+- in jenkins There are several places where Shared Libraries can be defined, depending on the use-case. Navigate to Manage Jenkins » System » Global Trusted Pipeline Libraries to configure as many libraries as necessary.
 
 ---
+
+
 
 ## Conclusion
 
-React.js is a robust and efficient library for building modern web interfaces. Its component-based approach, performance optimizations, and strong ecosystem make it a top choice for developers.
+Shared libraries in Jenkins Pipelines are a powerful tool for enhancing the modularity, reusability, and maintainability of your CI/CD processes. By centralizing common functionality in shared libraries, you can streamline your pipeline scripts, promote collaboration, and ensure consistency across projects. Start creating and using shared libraries in your Jenkins Pipelines to unlock their full potential and simplify your automation workflows.
 
 ---
 
 ## Author
 
-- **Name:** Sachin Kumar
-- **Email:** chaudhary2000sachin@gmail.com
+- **Name:** Sunny Kumar
+- **Email:** sunny.kumar.snaatak@mygurukulam.co
 
 ---
 
 ## References
 
-- [React Official Documentation](https://react.dev/)
-- [React GitHub Repository](https://github.com/facebook/react)
-- [Create React App](https://create-react-app.dev/)
-- [React Tutorial](https://react.dev/learn)
+- [shared library Official Documentation](https://www.jenkins.io/doc/book/pipeline/shared-libraries/)
+- [jenkins GitHub Repository](https://techforyou.medium.com/shared-libraries-in-jenkins-pipeline-a-comprehensive-guide-with-examples-83ddf0eec46e)
