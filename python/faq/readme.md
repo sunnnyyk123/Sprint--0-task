@@ -1,0 +1,12 @@
+| **Question**                                                         | **Answer**                                                                                                                             |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Q1. What is the command to install Python on Ubuntu/Debian?**      | Use `sudo apt install python3 -y` to install Python.                                                                                   |
+| **Q2. How do I check if Python is already installed?**               | Run `python3 --version` in the terminal.                                                                                               |
+| **Q3. What if `python3` is not found on my system?**                 | That means Python is not installed; proceed with the installation step using APT.                                                      |
+| **Q4. Do I need root privileges to install Python?**                 | Yes, you need `sudo` (superuser) access to install Python system-wide.                                                                 |
+| **Q5. Can I install a specific version of Python using APT?**        | APT typically installs the default version from the repository. For specific versions, manual installation from source is recommended. |
+| **Q6. How do I update Python to the latest version?**                | Either use `sudo apt upgrade` (if supported) or install from source using official Python tarball.                                     |
+| **Q7. Is Python installed as `python` or `python3`?**                | On modern Ubuntu systems, Python 3 is accessed via `python3`.                                                                          |
+| **Q8. Why does `python` command not work?**                          | `python` usually refers to Python 2.x. If not available, create an alias using `sudo ln -s /usr/bin/python3 /usr/bin/python`.          |
+| **Q9. How do I uninstall Python installed via APT?**                 | Use `sudo apt remove python3` (not recommended as system services depend on it).                                                       |
+| **Q10. What is the difference between APT and source installation?** | APT is easier and faster; source installation gives more control over the version and configuration.                                   |
